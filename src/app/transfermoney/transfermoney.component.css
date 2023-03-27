@@ -1,0 +1,38 @@
+.form-card {
+    
+    background-color:#ece0e0;
+    border-radius: 20px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 300px;
+    height: 350px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    left: 30px;
+    top: 5px;
+    z-index: 5;
+   
+   
+  }
+
+  #myForm {
+    
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f2f2f2;
+  }
+
+  input{
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  .validationdiv{
+    height:0px
+  }
+  .inputdiv{
+    height: 70px;
+  }
+

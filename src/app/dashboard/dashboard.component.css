@@ -1,0 +1,50 @@
+app-transfermoney{
+    margin-top: 100px;
+}
+
+
+.buttons {
+    background-color: #dbcdcd;
+    border-radius: 20px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    width: 300px;
+    position: relative;
+    
+   
+  }
+
+  /* #button2{
+        
+  } */
+
+  #closebutton{
+    position: relative;
+    top: -150px;
+    left: -60px; 
+    z-index: 6;
+  }
+  #balanceclosebutton{
+    position: relative;
+    top:-99px;
+    left:-99px;
+  }
+
+  .maindiv{
+    height: 300px;
+  }
+  .submaindiv{
+    height: 300px;
+  }
+
+  .transactionhistorydiv{
+    margin-top: 200px;
+  }
+
+ 
+
+  

@@ -1,0 +1,46 @@
+
+<div class="conatiner mt-5 text-center text-danger"style="margin: top 200px;" *ngIf="registerstatus">
+
+          <h1>register sucessfully please wait</h1>
+</div>
+
+
+    <div *ngIf="!registerstatus" class=" d-flex justify-content-center align-items-center" id="maindiv" >
+        
+        <div class=" d-flex justify-content-center align-items-center main"><img class="img1" src="assets/images/register_image-2.png" alt="image not loaded">
+            <form [formGroup]="registerform" class=" p-5 ms-5" id="form">
+                <div class="mb-3">
+                  <label for="exampleInputUsername" class="form-label">username</label>
+                  <input name="username"formControlName="username" type="text" class="form-control" >
+
+                  <div *ngIf=" this.registerform.get('username')?.errors && this.registerform.get('username')?.touched "class="text-danger mb-2">invalid username</div>
+
+                  <label for="exampleInputnumber" class="form-label">Account Number</label>
+                  <input name="accountnumber"formControlName="acno" type="text" class="form-control" >
+
+                  <div *ngIf=" this.registerform.get('acno')?.errors && this.registerform.get('acno')?.touched "class="text-danger mb-2">invalid account number</div>
+
+                  <div id="emailHelp" class="form-text">We'll never share your account number with anyone else.</div>
+
+                </div>  
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input name="password"formControlName="password" type="password" class="form-control" >
+                  <div *ngIf=" this.registerform.get('password')?.errors && this.registerform.get('password')?.touched "class="text-danger mb-2">password having atleast 8 characters </div>
+
+                  <label for="exampleInputPassword2" class="form-label">conform password</label>
+                  <input name="conformpasssword"formControlName="conformpassword" type="password" class="form-control"  >
+                  <div *ngIf=" this.registerform.value.password!=this.registerform.value.conformpassword && this.registerform.get('conformpassword')?.touched" class="text-danger mb-2">password not matches</div>
+
+                </div>
+
+            <div class="d-flex justify-content-center">
+                   <button (click)="register()" type="submit" class="btn btn-primary w-25 ">Register</button> </div>           
+             </form>
+            </div>
+        
+            
+               
+    
+    </div>
+

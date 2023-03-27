@@ -1,0 +1,11 @@
+ul li{
+    margin-top: 20px;
+  }
+  
+  ul li a:hover{
+    cursor: pointer;
+  }
+  
+  .transactionhistorylogo{
+    width: 25px;
+  }
