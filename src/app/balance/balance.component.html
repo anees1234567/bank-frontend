@@ -1,0 +1,10 @@
+
+    <div class="balance-card ">
+        <h2>Your Bank Balance</h2>
+        <p class="balance-amount">{{userbalance}}</p>
+        <div (click)="refresh()" [@spin]="isRefreshing ? 'active' : 'inactive'">
+            <i class="fas fa-sync"></i>
+          </div>
+
+    </div>
+

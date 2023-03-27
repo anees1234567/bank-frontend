@@ -1,0 +1,42 @@
+
+
+
+
+
+      
+     <div  class="form-card ">
+      <div *ngIf="!fundtransfersuccess">
+        <form    [formGroup]="depositform" id="form" >
+          <h2>deposit Form</h2>
+         <div class="inputdiv">
+            <label for="acno">Account Number:</label>
+            <input type="text" formControlName="toacno" name="acno"id="name" >
+            <div *ngIf=" this.depositform.get('acno')?.errors && this.depositform.get('acno')?.touched "class="text-danger ">invalid account number</div>
+            
+        </div >
+          <div class="inputdiv">
+            <label for="amount">enter amount</label>
+            <input type="text" id="amount" formControlName="amount" name="amount">
+          <div *ngIf=" this.depositform.get('amount')?.errors && this.depositform.get('amount')?.touched "class="text-danger  ">enter a amount</div>
+        </div >
+          <div class="inputdiv">
+            <label for="pswd">enter password</label>
+            <input type="password" id="pswd" formControlName="password" name="password">
+            <div *ngIf=" this.depositform.get('password')?.errors && this.depositform.get('password')?.touched "class="text-danger ">invalid password</div>
+        </div>      
+          <button type="button" (click)="deposit()" class="btn btn-primary ms-5 mt-3">transfer</button>
+          
+        </form>
+      </div>
+
+      <div *ngIf="fundtransfersuccess">
+        <h3 class="text-success">transaction successfull</h3>
+      </div>
+
+      <div *ngIf="fundtransfererror">
+        <h3 class="text-danger">transaction failed</h3>
+      </div>
+
+    </div>
+    
+   

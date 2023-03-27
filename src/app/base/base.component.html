@@ -1,0 +1,43 @@
+<body>
+		
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar" class="order-last" class="col-2" style="background-color: rgba(113, 218, 218, 0.521); height: 100vh;" >
+           
+    <div class="">
+        <ul class="list-unstyled components mt-5 ms-5">
+          <li class="active">
+            <a (click)="displayhome()"><span class="fa fa-home mr-3"></span> Home</a>
+          </li>
+          <li>
+              <a (click)="displaydash()"> <img class="transactionhistorylogo" src="/assets/images/mobile-banking.png" alt=""> Dashboard</a>
+          </li>
+         
+          <li>
+          <a (click)="logout()"><span class="fa fa-cogs mr-3"></span> logout</a>
+          </li>
+
+          <li>
+            <a (click)="delete()"><span class="fa fa-delete mr-3"></span> delete</a>
+            </li>
+
+          <li><app-deleteconfirm   (ondelete)="deletefromparent()"   (oncancel)="deletecancel()"  *ngIf="deleteconformstatus"></app-deleteconfirm></li>
+
+          
+
+
+         
+        </ul>
+  
+      </div>
+    </nav>
+  
+    <!-- Page Content  -->
+  <div id="content" class="p-4 p-md-5 pt-5 col-10" >
+     <div *ngIf="ishome"> <app-home></app-home></div >
+      <div *ngIf="isdashboard"><app-dashboard></app-dashboard></div >
+       
+  </div>
+    </div>
+  
+  
+  </body>

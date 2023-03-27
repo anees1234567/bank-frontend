@@ -1,0 +1,22 @@
+1)link all librariees to the index.html files
+2)create componets 
+        1)login component
+        2)register component
+        3)dash board component(on account deposit,fund transfer,balance enquiry,delete account,logout)
+        4)transcation_history_page component
+        5)page not found component
+3)setup path for each component
+4)use routeroutlet in Appcomponent
+
+{
+        angularforms:
+
+        -template drivenforms:create a html view for the html page
+        -model driven forms:create a  modal for the form in its file
+
+        reactive forms: to validateuser inputs
+        - import reactive forms module to app module
+        -
+
+
+}

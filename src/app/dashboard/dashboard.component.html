@@ -1,0 +1,28 @@
+<div class="d-flex align-items-center justify-content-center maindiv">
+        <div class="col-4 d-flex align-items-center justify-content-center submaindiv">
+                <div  *ngIf="!isbalance" class="buttons ">
+                        <button  type="button" (click)=" balancecheck()"  class="btn btn-success">check balance</button>
+                </div>
+                 <div class="balancediv"  *ngIf="isbalance"><app-balance></app-balance></div >
+                 <button *ngIf="balanceclosebutton" (click)="balanceclose()" type="button" id="balanceclosebutton" class="btn  ms-5"><i class="fa fa-window-close" aria-hidden="true"></i></button>
+
+        
+        </div>
+         <div class="col-4 d-flex align-items-center justify-content-center submaindiv">    
+                <div  *ngIf="!formdisplay" id="button2" class="buttons ">
+                 <button  type="button" (click)="showForm()"  class="btn btn-success">deposit</button>
+                 </div>
+                <div *ngIf="formdisplay"><app-transfermoney ></app-transfermoney></div >
+                <button  *ngIf="formdisplay"  (click)="closeform()" type="button" id="closebutton" class="btn  ms-5"><i class="fa fa-window-close" aria-hidden="true"></i></button>
+        </div>
+</div >
+
+        <!-- DIV FOR TRANSACTION HISTORY -->
+
+        <div class="col-12 d-flex align-items-center justify-content-center submaindiv">
+               
+                 <div class="transactionhistorydiv" ><app-transaction-history-component></app-transaction-history-component></div>
+        
+        </div>
+
+ 
